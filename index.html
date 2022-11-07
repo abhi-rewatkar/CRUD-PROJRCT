@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD project</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ===================================pop up ============================== -->
+
+    <section class="container" id="viewModal" onclick="closeModal('viewModal', event.target.id)">
+        <div class="container_section">
+            <div class="close">
+                <i onclick="closeModal('viewModal', true)" class="fas fa-times-circle"></i>
+            </div>
+
+            <h1 id="title">The Shawshank Redemption</h1>
+            <div class="section_popup">
+                <div class="section_popup_poster">
+                    <div class="image">
+                        <img class="images" id="poster"
+                            src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4MzQzMzM2Nl5BMl5BanBnXkFtZTgwMTQ1NzU3MDI@._V1_SY500_CR0,0,356,500_AL_.jpg"
+                            alt="">
+                    </div>
+                    <div class="genre_section">
+                        <p class="genre" id="genre">Inspring, Drama</p>
+                    </div>
+
+                </div>
+                <div class="section_popup_details">
+                    <div class="storyline">
+                        <h2>Storyline</h2>
+                        <p id="storyline">A melodramatic tale of a man with a terminal disease. The story begins with Dr
+                            Bhaksar
+                            winning a literary prize for his book about a patient called Anand. The rest is flashback.
+                            Anand, the title character, is suffering from lymphosarcoma of the intestine. He, however
+                            appears to be cheerful on the outside and is determined to extract as much pleasure from his
+                            remaining lifespan as is possible. Dr. Bhaskar his physician tends to Anand in his last
+                            days. After Anand dies we can however still hear his voice which was recorded on a tape. Dr
+                            Bhakser writes a book on his patient and wins a literary prize for it Written by\nAnonymous
+                        </p>
+                    </div>
+
+                    <div class="Actors">
+                        <h2>Actors</h2>
+                        <p id="actors">Hritik Roshan, Farhan Akhtar</p>
+                    </div>
+
+                    <div class="RelesedDate Actors">
+                        <h2>RelesedDate</h2>
+                        <p id="releaseDate">25th December 2002</p>
+                    </div>
+
+                    <div class="Runtime Actors">
+                        <h2>Runtime</h2>
+                        <p id="Runtime">130 min</p>
+                    </div>
+
+                    <div class="Rating Actors">
+                        <h2>Rating</h2>
+                        <div class="ratings">
+                            <div class="imbdrating">
+                                <h2>IMBD</h2>
+                                <p id="imbdrating">8.6</p>
+                            </div>
+                            <div class="averagerating">
+                                <h2>Average</h2>
+                                <p id="averagerating">7.8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- ===================================Add New Movies============================== -->
+    <section class="movie" id="addmovieModal" onclick="closeModal('addmovieModal' ,event.target.id)">
+        <div class="movie_container">
+            <div class="close">
+                <i onclick="closeModal('addmovieModal')" class="fas fa-times-circle"></i>
+            </div>
+            <h1 class="movie_title">Add New Movies</h1>
+            <form id="add_form">
+                <div class="movie_form">
+                    <input type="text" placeholder="Enter Title" class="inp" id="add_title">
+                    <input type="text" placeholder="Enter Genres seprated by ," class="inp" id="add_genres">
+                    <input type="number" placeholder="Enter Duration" class="inp" id="add_duration">
+                    <input type="text" placeholder="Enter Relesed Date" class="inp" id="add_relesedate"
+                        onfocus="convertToDate()">
+                    <input type="text" placeholder="Enter Actors seprated by , " class="inp" id="add_actor">
+                    <input type="text" placeholder="Enter IMDB Rating" class="inp" id="add_imbdrating">
+                    <input type="url" placeholder="Enter postal url" class="inp url" id="add_url">
+                    <textarea id="text" class=" inp url text" placeholder="Enter Story Line" id="" cols="30" rows="10"
+                        id="add_text"></textarea>
+
+                    <button type="button" class="button btn" onclick="createMovie()">Create Movie</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ===================================update movie ============================== -->
+    <section class="updatemovie" id="updatemovieModal">
+        <div class="movie_container">
+            <div class="close">
+                <i onclick="closeModal('updatemovieModal')" class="fas fa-times-circle"></i>
+            </div>
+            <h1 class="movie_title">Edit Movies</h1>
+            <form id="update_form">
+                <div class="movie_form">
+                    <input type="text" placeholder="Enter Title" class="inp" id="update_title">
+                    <input type="t  ext" placeholder="Enter Genres seprated by ," class="inp" id="update_genres">
+                    <input type="text" placeholder="Enter Duration" class="inp" id="update_duration">
+                    <input type="text" placeholder="Enter Relesed Date" class="inp" id="update_relesedate"
+                        onfocus="convertToDate()">
+                    <input type="text" placeholder="Enter Actors seprated by , " class="inp" id="update_actor">
+                    <input type="text" placeholder="Enter IMDB Rating" class="inp" id="update_imbdrating">
+                    <input type="url" placeholder="Enter postal url" class="inp url" id="update_url">
+                    <textarea class=" inp url text" placeholder="Enter Story Line" cols="30" rows="10"
+                        id="update_text"></textarea>
+                    Blocked <input type="checkbox" class="checkbox" id="update_blocked" value="true">
+                    <button type="button" class="button btn" onclick="updateMovie()">Update Movie</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- =======================================header================================= -->
+    <div class="header_section">
+        <div class="section">
+
+            <div class="header2">
+                <div class="title">All Movies</div>
+
+                <button class="button" onclick="openaddmovie()">Add New Movies</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================table================================= -->
+
+
+    <div class="products">
+        <div class="products_heading">
+            <table>
+                <thead class="table-head">
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Released Date</th>
+                        <th>Genres</th>
+                        <th>Duration</th>
+                        <th>IMBD Rating</th>
+                        <!-- <th>Content Rating </th> -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="movies">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- =======================================pagiantion================================= -->
+    <section class="pagination">
+        <div class="page_left">
+            <button class="button btn_p " onclick="prevPage()">
+                <i class="fa-solid fa-angles-left"></i>
+                Prev
+            </button>
+
+            <div id="pages">
+
+            </div>
+
+            <button class="button btn_p" onclick="nextPage()">
+                Next
+                <i class="fa-solid fa-angles-right"></i>
+            </button>
+
+
+            <input class="inp page_number" type="number" onkeyup="openPage (this.value)"
+                placeholder="Enter Page Number">
+        </div>
+
+        <div class="page_right">
+            <p>Page <span id="currentPage"> 1</span> of <span id="total_Page">0</span></p>
+        </div>
+
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

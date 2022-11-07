@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===============================pop up===================================== */
+
+.container,
+.movie,
+.updatemovie {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: none;
+}
+
+/* .updatemovie{
+    display: flex;
+} */
+
+.container_section {
+    height: 60%;
+    width: 80%;
+    background-color: white;
+    margin: 10% 10%;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+
+}
+
+.container_section>h1 {
+    font-family: 'Segoe UI';
+
+}
+
+.close {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    font-size: 30px;
+    color: red;
+
+}
+
+.section_popup {
+    height: 89%;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 15px;
+    display: flex;
+    font-family: 'Segoe UI';
+}
+
+.section_popup_poster {
+    height: 100%;
+    width: 25%;
+    /* background-color: green; */
+}
+
+.image {
+    height: 90%;
+    width: 100%;
+}
+
+.images {
+    height: 100%;
+    width: 100%;
+}
+
+.genre_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre {
+    /* text-indent: 20px; */
+    margin-top: 10px;
+}
+
+.section_popup_details {
+    height: 100%;
+    width: 75%;
+    /* background-color: yellowgreen; */
+    padding: 10px 10px 10px 20px;
+}
+
+.Actors {
+    margin-top: 10px;
+}
+
+.Rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.ratings {
+    display: flex;
+    column-gap: 50px;
+}
+
+/* =====================================header============================================= */
+
+.header_section {
+    height: auto;
+    width: 100%;
+    background-color: rgb(183 179 179);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.section {
+    height: auto;
+    width: 80%;
+    /* background-color: blue;  */
+}
+
+.title_header {
+    height: 70px;
+    width: 15%;
+    /* background-color: yellow; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 8%; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+
+}
+
+.header2 {
+    /* margin-top: 10px; */
+    height: 100px;
+    width: 100%;
+    /* background-color: rgb(222 222 222); */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title {
+    height: 100px;
+    width: 15%;
+    /* background-color: yellow; */
+    color: rgb(58, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 8%; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.button {
+    padding: 0px 17px;
+    background-color: #3dc8f5;
+    font-size: 17px;
+    /* margin-right: 5%; */
+    border-radius: 10px;
+    height: 53px;
+    color: white;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: rgb(69, 248, 251);
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #3dc8f5;
+}
+
+/* ==============================================table====================================== */
+
+.products {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.products_heading {
+    width: 80%;
+    /* background-color: lightskyblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI';
+
+}
+
+table {
+    width: 100%;
+    /* margin-top: 518px; */
+}
+
+.table-head {
+    background-color: #3dc8f5;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(231, 230, 230);
+}
+
+table th {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+
+}
+
+
+td,
+th {
+    padding: 15px 0px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #efebeb;
+    /* border: 1px solid white; */
+    border-collapse: collapse;
+}
+
+#movies {
+    margin-top: 500px;
+    text-indent: 10px;
+}
+
+i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fa-eye {
+
+    color: rgb(95, 95, 255);
+}
+
+.fa-edit {
+
+    color: green;
+}
+
+.fa-trash {
+
+    color: red;
+}
+
+i:hover {
+    transform: scale(1.2);
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions {
+    padding: 0px 0px !important;
+    text-indent: 0px;
+}
+
+.actions>i {
+    margin: 0px 10px;
+}
+
+/* =================================css for create movie============= */
+
+.movie_container {
+    height: 55%;
+    width: 50%;
+    background-color: white;
+    margin: 10% 25%;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Segoe UI';
+
+}
+
+.movie_form {
+    height: auto;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 10px;
+    margin-top: 15px;
+}
+
+.movie_title {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+}
+
+.inp {
+    /* height: 20px; */
+    width: 49.5%;
+    outline: none;
+    text-indent: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+
+}
+
+.url {
+    width: 100%;
+    outline: none;
+}
+
+.text {
+    height: 150px;
+}
+
+.btn {
+    margin-left: 42%;
+}
+
+/* =======================================pagiantion=================================*/
+
+
+.pagination {
+    height: 60px;
+    width: 80%;
+    margin-left: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Segoe UI;
+}
+
+.btn_p {
+    padding: 5px 20px;
+    height: 45px;
+}
+
+.page_number {
+    width: 20%;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    height: 45px;
+}
+
+.page_left {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pages_event {
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.pages_event:hover {
+    background-color: lightgray;
+}
+
+.page_right {
+    font-size: 20px;
+}
+
+.circle_blocked {
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 150px;
+   
+}

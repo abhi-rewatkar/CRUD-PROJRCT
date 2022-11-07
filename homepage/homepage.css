@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*==================================header============================================*/
+
+.header {
+    height: auto;
+    width: 100%;
+    background-color: rgb(66, 66, 66);
+    padding: 20px 6%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.header_title {
+    height: 80px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    color: white;
+}
+
+/*================================== card ============================================*/
+
+.cards {
+    height: auto;
+    width: 100%;
+    /* background-color: rgb(212, 187, 187); */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 25px;
+}
+
+.card {
+    height: 400px;
+    width: 18%;
+    border-radius: 10px;
+    background-color: rgb(45, 36, 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 75%;
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.class_info {
+    height: 25%;
+    width: 100%;
+    /* background-color: lightgreen; */
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 9px;
+    color: white;
+    padding: 20px;
+
+}
+
+.content_subtitle {
+    width: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stars {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Ratenow {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+
+}
+
+.fivestars {
+    display: flex;
+    column-gap: 7px;
+}
+
+.whitestars {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.yellowstars {
+    width: auto;
+    position: absolute;
+    overflow: hidden;
+    /* background-color: rgb(53, 29, 136); */
+
+}
+
+.whitestars > i {
+    color: rgb(252, 252, 252);
+}
+
+.yellowstars > i {
+    color: gold;
+}
+
+
+button {
+    padding: 0px 25px;
+    background-color: #3dc8f5;
+    font-size: 16px;
+    /* margin-right: 5%; */
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: rgb(69, 248, 251);
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #3dc8f5;
+}
+
+/* ==================================rating pop up==============================================*/
+
+.star_rating {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.star_rating_container {
+    width: 500px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.rate_star {
+    color: rgb(204, 207, 207);
+    font-size: 30px;
+}
+
+.rate_star:hover {
+    color: gold;
+}
+
+.submit_button {
+    margin-top: 20px;
+    background-color: rgb(204, 207, 207);
+    color: black;
+}
+
+.submit_button:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.submit_button:active {
+    background-color: rgb(204, 207, 207);
+    color: black;
+}
